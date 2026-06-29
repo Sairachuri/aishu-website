@@ -1,37 +1,120 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Aishu ❤️</title>
-    <style>
-        body {
-            background: pink;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin-top: 100px;
-        }
-        h1 {
-            color: red;
-            font-size: 50px;
-        }
-        h2 {
-            color: white;
-            background: red;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-    </style>
+
+```
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .box {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        max-width: 500px;
+        width: 90%;
+    }
+
+    input {
+        width: 80%;
+        padding: 12px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #ff4d6d;
+        color: white;
+        font-size: 16px;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    #lovePage {
+        display: none;
+    }
+
+    h1 {
+        color: #ff3366;
+    }
+
+    .heart {
+        font-size: 50px;
+    }
+</style>
+```
+
 </head>
 <body>
 
-<h1>♥ I Love You Aishu ♥</h1>
+```
+<div class="box" id="loginPage">
+    <div class="heart">❤️</div>
+    <h2>A Special Message</h2>
+    <p>Enter the password to continue</p>
 
-<h2>My Sweetheart Forever</h2>
+    <input type="password" id="password" placeholder="Enter Password">
+    <br>
 
-<p>You make every day special.</p>
+    <button onclick="checkPassword()">Open</button>
+</div>
 
-<p>🌹 Forever Yours, Sai 🌹</p>
+<div class="box" id="lovePage">
+    <div class="heart">❤️</div>
+
+    <h1>I Love You Aishu ❤️</h1>
+
+    <h2>My Sweetheart Forever</h2>
+
+    <p>
+        You make every day special.<br>
+        You are my happiness, my smile, and my favorite person.
+    </p>
+
+    <p>
+        🌹 Forever Yours, Sai 🌹
+    </p>
+</div>
+
+<script>
+    function checkPassword() {
+
+        // CHANGE THIS PASSWORD
+        const correctPassword = "saishu0124";
+
+        const enteredPassword =
+            document.getElementById("password").value;
+
+        if (enteredPassword === correctPassword) {
+            document.getElementById("loginPage").style.display = "none";
+            document.getElementById("lovePage").style.display = "block";
+        } else {
+            alert("Wrong password ❤️");
+        }
+    }
+</script>
+```
 
 </body>
 </html>
